@@ -7,9 +7,9 @@ def mean_median_mode(x: list) -> dict:
     """
     # Write code here
     x = np.asarray(x, dtype=float)
-    mean = float(np.mean(x))
+    mean = float(sum(x)) / len(x)
     
-    x = np.sort(x)
+    x.sort()
     middle = len(x) // 2
     
     if len(x) % 2 == 0:
